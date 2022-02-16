@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
-import {HashRouter as Router, Route} from 'react-router-dom'
+import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import Home from "./Home"
 import SearchForm from "./SearchForm";
 import Flights from "./Flights"
 
@@ -8,21 +9,23 @@ class BurningAirlines extends React.Component{
   render(){
     return(
       <div>
-        <h2>
-          Burning Airlines
-        </h2>
-        <ul>
-          <li>Search Link</li>
-          <li>User Link</li>
-        </ul>
-
         <Router>
+          <header>
+            <h1>Welcome to Burning Airlines&reg; &copy; &trade;</h1>
+            <nav>
+              <Link to="/">Home</Link> |{' '}
+              <Link to="/search">Search Flights</Link>
+            </nav>
+          </header>
+          <hr />
 
-          <Route path='/' component={SearchForm} />
-          <Route exact path='/search/:searchText' component={Flights} />
+          <Home />
+
+            <Route exact path='/search' component={SearchForm} />
+            <Route exact path='/search/:origin/:destination' component={Flights} />
+
 
         </Router>
-
       </div>
     );
   } // render()
