@@ -17,6 +17,7 @@ class SearchForm extends React.Component{
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.history.push(`/search/${this.state.origin}/${this.state.destination}`)
   }
 
   render(){
