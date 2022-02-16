@@ -12,7 +12,7 @@ class Flights extends React.Component{
   performSearch = async (origin, destination) => {
     try {
       console.log(origin, destination);
-      const res = await axios.get('http://localhost:3000/flights/search', {origin: origin, destination: destination});
+      const res = await axios.get('http://localhost:3000/flights/search', {params: {origin: origin, destination: destination}});
       console.log('response', res);
       
     } catch( err ){
