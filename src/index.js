@@ -4,9 +4,7 @@ import './index.css';
 import BurningAirlines from './components/BurningAirlines'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BurningAirlines />
-  </React.StrictMode>,
+    <BurningAirlines />,
   document.getElementById('root')
 );
 
