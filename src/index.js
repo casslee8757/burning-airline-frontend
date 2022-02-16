@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import BurningAirlines from './components/BurningAirlines'
 
 ReactDOM.render(
-    <App />,
+    <BurningAirlines />,
   document.getElementById('root')
 );
-
 
