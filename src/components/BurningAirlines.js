@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
+import {HashRouter as Router, Route} from 'react-router-dom'
 import SearchForm from "./SearchForm";
+import Flights from "./Flights"
 
 class BurningAirlines extends React.Component{
   render(){
@@ -14,7 +16,12 @@ class BurningAirlines extends React.Component{
           <li>User Link</li>
         </ul>
 
-        <SearchForm />
+        <Router>
+
+          <Route path='/' component={SearchForm} />
+          <Route exact path='/search/:searchText' component={Flights} />
+
+        </Router>
 
       </div>
     );

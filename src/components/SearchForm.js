@@ -25,6 +25,7 @@ class SearchForm extends React.Component{
         <h4>Search for flights</h4>
         <form onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.handleOrigin} placeholder="Origin" />
+          
           <input type="text" onChange={this.handleDestination} placeholder="Destination" />
           <button>Search</button>
         </form>
