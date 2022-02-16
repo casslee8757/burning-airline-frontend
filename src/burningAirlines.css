@@ -1,0 +1,44 @@
+.columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    width: 35px;
+    height:35px;
+    border-radius: 5px;
+    background-color: rgb(150, 149, 149);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.columns:hover{
+    background-color: rgb(26, 164, 81);
+}
+
+.airplane{
+    height: auto;
+}
+.seat_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.seats {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 34px;
+}
+
+.column-letters {
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-ceter{
+    text-align: center;
+}

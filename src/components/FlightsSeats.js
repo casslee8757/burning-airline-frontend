@@ -1,18 +1,37 @@
 import React from 'react'
+import Seat from './Seat';
+
 
 class FlightsSeats extends React.Component{
-    componentDidMount(){
-        const seats = [...Array(5)].map(_ => Array(10).fill(null));
-        const letters = [...'abcdefghijklmnopqrstuvwxyz'];
-        
+     
+    handleClick = (row, columnKey) => {
+        this.props.onClick(row, columnKey);
     }
+
     render(){
-
+        const {letters, seatMap} = this.props
         return(
-
-            <div>
-                asdsa
+        <div className="airplane">
+            <div className="seat_details ">
+                {
+                    seatMap.map((el,index)=>{
+                   return <div>
+                        <p className="column-letters text-center"> {letters[index].toUpperCase()}</p>
+                    {
+                        seatMap[index].map((el2,index2)=>{ 
+                            return <Seat   
+                                    column={letters[index]} 
+                                    columnKey={index} 
+                                    row={index2}   
+                                    onClick={this.handleClick}                                   
+                                />
+                        })
+                    }
+                    </div>
+                 }) 
+                }
             </div>
+         </div>
         )
     }
 

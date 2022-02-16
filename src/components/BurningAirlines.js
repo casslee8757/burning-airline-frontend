@@ -18,13 +18,9 @@ class BurningAirlines extends React.Component{
             </nav>
           </header>
           <hr />
-
           <Home />
-
             <Route exact path='/search' component={SearchForm} />
             <Route exact path='/search/:origin/:destination' component={Flights} />
-
-
         </Router>
       </div>
     );

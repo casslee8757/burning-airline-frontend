@@ -1,5 +1,6 @@
 import React from "react";
 import FlightsSeats from "./FlightsSeats";
+import Reservations from "./Reservations";
 class SearchForm extends React.Component{
 
   state = {
@@ -20,6 +21,7 @@ class SearchForm extends React.Component{
     this.props.history.push(`/search/${this.state.origin}/${this.state.destination}`)
   }
 
+
   render(){
     return(
       <div>
@@ -29,7 +31,7 @@ class SearchForm extends React.Component{
           <input type="text" onChange={this.handleDestination} placeholder="Destination" />
           <button>Search</button>
         </form>
-        <FlightsSeats/>
+        <Reservations/>
       </div>
     );
   } // render()
