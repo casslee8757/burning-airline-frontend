@@ -6,6 +6,7 @@ class FlightsSeats extends React.Component{
     state = {
         seatSelected: '',
         bookingSeat:'',
+        userReserved: false,
        
     }
     handleClick = (row, columnKey) => {
@@ -34,6 +35,7 @@ class FlightsSeats extends React.Component{
                                     onClick={this.handleClick}            
                                     seat={(this.state.seatSelected[1]=== index && this.state.seatSelected[0]=== index2 ? true: false)}
                                     seatsReserved={this.props.seatsReserved}
+                                    seatWasReserved={this.props.seatWasReserved}
                                 />
                         })
                     }

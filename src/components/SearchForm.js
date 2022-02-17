@@ -24,14 +24,33 @@ class SearchForm extends React.Component{
 
   render(){
     return(
-      <div>
-        <h4>Search for flights</h4>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.handleOrigin} placeholder="Origin" />
-          <input type="text" onChange={this.handleDestination} placeholder="Destination" />
-          <button>Search</button>
-        </form>
+            <div class="container p-4"> 
+              <div class="row">
+                  <div class="col-md-12">
+                      <h4>Search Flight</h4> 
+                  </div>
+              </div>
+              <hr/>
+              <div class="d-flex justify-content-center my-5"> 
+                  <div class="card col-md-8">
+                      <div class="card-header d-flex justify-content-between">
+                          <div> <h5> We can't promise if we're going to land</h5></div>
+                          <div> </div>
+                      </div>
+                      <div class="card-body">
+                      <form onSubmit={this.handleSubmit}>
+                        <label for="Origin" class="form-label">Origin</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1"  onChange={this.handleOrigin} aria-describedby="emailHelp" required/>
+                        <label for="Destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1"  onChange={this.handleDestination} aria-describedby="emailHelp" required/>
+                        <button class="btn btn-danger my-3" >Search</button>
+                      </form>
+                          </div>
+                      </div>
+              </div>
       </div>
+
+      
     );
   } // render()
 } // class SearchForm

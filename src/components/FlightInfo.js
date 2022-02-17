@@ -7,13 +7,12 @@ class FlightInfo extends React.Component{
 
   render(){
     return(
-      <div>
-          <h3> Flight </h3>
-          <p>Airplane - {this.props.plane}</p>
-          <p>Origin - {this.props.origin}</p>
-          <p>Destination - {this.props.destination}</p>
-          <p>Seats Available - {this.props.seatsResponse}</p>
-      </div>
+      <ul class="list-group">
+          <li class="list-group-item">Airplane - {this.props.plane}</li>
+          <li class="list-group-item">Origin - {this.props.origin}</li>
+          <li class="list-group-item">Destination - {this.props.destination}</li>
+          <li class="list-group-item">Seats Available - {this.props.seatsResponse}</li>
+      </ul>
     );
   }   
 } 

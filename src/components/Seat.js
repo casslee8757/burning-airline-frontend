@@ -15,22 +15,23 @@ class Seat extends React.Component{
         }
     }
 
-
     selectSeat = () => {
+        console.log(this.props.seatWasReserved);
         this.setState({selected: [this.props.row, this.props.columnKey]})
         this.props.onClick(this.props.row, this.props.columnKey);
+        
     }
 
 
     render(){
 
         return(
-                <div
-                 seatReserved={this.state.isItReserved === true ? "seat-selected" : ""}
-                 className={this.props.seat ? "selected columns " : "columns "} 
-                 onClick={this.selectSeat}>
-                        {this.props.column.toUpperCase()}{this.props.row}  
-                </div>        
+            <div
+                seatReserved={this.state.isItReserved === true ? "seat-selected" : ""}
+                className={this.props.seat ? "selected columns " : "columns "} 
+                onClick={this.selectSeat}>
+                    {this.props.column.toUpperCase()}{this.props.row}  
+            </div>        
         
         ) 
     }
