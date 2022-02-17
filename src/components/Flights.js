@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import FlightDetails from "./FlightDetails"
-import {HashRouter as Link, Route, Router} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import FlightInfo from "./FlightInfo";
 
 
 class Flights extends React.Component{
@@ -22,9 +22,6 @@ class Flights extends React.Component{
     try {
       console.log(origin, destination);
       const res = await axios.get('http://localhost:3000/flights/search', {params: {origin: origin, destination: destination}});
-
-      console.log(res.data);
-      console.log(res.data.plane[0].name);
 
       this.setState({flight: res.data.flight, plane: res.data.plane})
       
@@ -57,14 +54,13 @@ class Flights extends React.Component{
               flights.flight.map(f => (
                 <tr key = {f.id}>
                   <td>{f.date_flight}</td>
-                  <td>{this.handleClick}>BA-0{f.id}</td>
+                  <td><Link to={`/flight/${f.id}`}>BA-0{f.id}</Link></td>
                   <td>{f.origin} {">"} {f.destination}</td>
                 </tr>
               ))
             }
           </tbody>
         </table>
-       
       </div>
     );
   } // render()
