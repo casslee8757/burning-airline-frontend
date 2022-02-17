@@ -32,13 +32,8 @@ class Flights extends React.Component{
     }
   }
 
-  
-
   render(){
-
     const flights = this.state;
-
-
     return(
       <div>
         <table>

@@ -31,7 +31,6 @@ class SearchForm extends React.Component{
           <input type="text" onChange={this.handleDestination} placeholder="Destination" />
           <button>Search</button>
         </form>
-        <Reservations/>
       </div>
     );
   } // render()
