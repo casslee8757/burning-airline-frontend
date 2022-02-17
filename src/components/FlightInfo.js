@@ -5,17 +5,13 @@ class FlightInfo extends React.Component{
     render(){
       return(
         <div>
-            <h3> Flight </h3>
-            <div> Airplane </div>
+            <h3>Date: {this.props.info.date } </h3>
+            <div>Plane:  {this.props.info.airplane } </div>
             <div>
-                Oirigin Destination
+            Destination: {this.props.info.origin }
             </div>
             <div> 
-                Seats Available
-            </div>
-
-            <div>
-                Book Flight
+             Origin: {this.props.info.destination }
             </div>
 
         </div>
@@ -23,5 +19,5 @@ class FlightInfo extends React.Component{
     } 
   
   } 
-  
+    
   export default FlightInfo;

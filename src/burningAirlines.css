@@ -42,3 +42,8 @@
 .text-ceter{
     text-align: center;
 }
+
+
+.selected{
+    background-color: rgb(26, 164, 81);
+}

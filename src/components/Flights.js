@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import FlightDetails from "./FlightDetails"
 import {HashRouter as Link, Route, Router} from 'react-router-dom'
 
 
