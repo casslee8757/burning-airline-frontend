@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom'
-import FlightInfo from "./FlightInfo";
 
 
 class Flights extends React.Component{
@@ -46,7 +45,7 @@ class Flights extends React.Component{
                 <div class="card col-md-8">
                     <div class="card-header d-flex justify-content-between">
                         <div> <h5>We told you already, we might land we might not</h5></div>
-                        <div> </div>
+                        <div>  <Link className="btn btn-danger" to="/search">Go Back</Link></div>
                     </div>
                     <div class="card-body">
                     <table class="table  table-hover table-bordered">

@@ -63,3 +63,12 @@
     font-size: 14px;
     pointer-events: none;
 }
+.list-group-item {
+    padding: 20px 30px;
+  }
+  
+  .list-group-item.active {
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+  }

@@ -1,6 +1,4 @@
 import React from "react";
-import FlightsSeats from "./FlightsSeats";
-import Reservations from "./Reservations";
 class SearchForm extends React.Component{
 
   state = {
@@ -35,7 +33,7 @@ class SearchForm extends React.Component{
                   <div class="card col-md-8">
                       <div class="card-header d-flex justify-content-between">
                           <div> <h5> We can't promise if we're going to land</h5></div>
-                          <div> </div>
+                          
                       </div>
                       <div class="card-body">
                       <form onSubmit={this.handleSubmit}>

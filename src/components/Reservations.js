@@ -76,11 +76,11 @@ return(
             <div>
                <h5> Well if you insist </h5>
             </div>
-            <div> <button onClick={this.makeReservation}> Make booking </button></div>
+            <div> <button class="btn btn-danger" onClick={this.makeReservation}> Make booking </button></div>
          </div>
          <div class="card-body">
-         <div class="row">
-            <div class="col-md-6 ">
+         <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-md-6">
                <FlightInfo 
                   plane={this.state.plane} 
                   origin={this.state.origin}
