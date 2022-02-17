@@ -5,46 +5,17 @@ import axios from 'axios';
 
 class FlightInfo extends React.Component{
 
-  state ={
-    plane: '',
-    origin: '',
-    destination: '',
-    seats: '',
-  }
-
-  componentDidMount(){
-    this.performSearch();
-  }
-
-  performSearch = async () => {
-    try {
-      const res = await axios.get('http://localhost:3000/flights/' + this.props.match.params.id);
-      console.log(res);
-
-      this.setState({
-        plane: res.data.plane.name,
-        origin: res.data.flight.origin,
-        destination: res.data.flight.destination,
-        seats: res.data.available_seat
-
-      })
-      
-    } catch( err ){
-      console.log('Error in search AJAX: ', err);
-
-      }
-    }
   render(){
     return(
       <div>
           <h3> Flight </h3>
-          <p>Airplane - {this.state.plane}</p>
-          <p>Origin - {this.state.origin}</p>
-          <p>Destination - {this.state.destination}</p>
-          <p>Seats Available - {this.state.seats}</p>
+          <p>Airplane - {this.props.plane}</p>
+          <p>Origin - {this.props.origin}</p>
+          <p>Destination - {this.props.destination}</p>
+          <p>Seats Available - {this.props.seatsResponse}</p>
       </div>
     );
   }   
 } 
   
-  export default FlightInfo;
+export default FlightInfo;

@@ -4,6 +4,7 @@ import Home from "./Home"
 import SearchForm from "./SearchForm";
 import Flights from "./Flights"
 import FlightInfo from "./FlightInfo";
+import Reservations from "./Reservations";
 
 
 class BurningAirlines extends React.Component{
@@ -22,7 +23,7 @@ class BurningAirlines extends React.Component{
           <Home />
             <Route exact path='/search' component={SearchForm} />
             <Route exact path='/search/:origin/:destination' component={Flights} />
-            <Route exact path='/flight/:id' component={FlightInfo} />
+            <Route exact path='/flight/:id' component={Reservations} />
 
 
         </Router>
