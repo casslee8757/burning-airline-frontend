@@ -6,6 +6,7 @@ import axios from 'axios';
 class FlightInfo extends React.Component{
 
   state ={
+    flight: '',
     plane: '',
     origin: '',
     destination: '',
@@ -22,6 +23,7 @@ class FlightInfo extends React.Component{
       console.log(res);
 
       this.setState({
+        flight: res.data.flight.id,
         plane: res.data.plane.name,
         origin: res.data.flight.origin,
         destination: res.data.flight.destination,
@@ -37,11 +39,11 @@ class FlightInfo extends React.Component{
   render(){
     return(
       <div>
-          <h3> Flight </h3>
-          <p>Airplane - {this.state.plane}</p>
-          <p>Origin - {this.state.origin}</p>
-          <p>Destination - {this.state.destination}</p>
-          <p>Seats Available - {this.state.seats}</p>
+          <h3> Flight - BA-0{this.state.flight} </h3>
+          <p><strong>Airplane</strong> - {this.state.plane}</p>
+          <p><strong>Origin</strong> - {this.state.origin}</p>
+          <p><strong>Destination</strong> - {this.state.destination}</p>
+          <p><strong>Seats Available</strong> - {this.state.seats}</p>
       </div>
     );
   }   
