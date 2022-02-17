@@ -3,6 +3,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import Home from "./Home"
 import SearchForm from "./SearchForm";
 import Flights from "./Flights"
+import FlightInfo from "./FlightInfo";
 
 
 class BurningAirlines extends React.Component{
@@ -21,7 +22,7 @@ class BurningAirlines extends React.Component{
           <Home />
             <Route exact path='/search' component={SearchForm} />
             <Route exact path='/search/:origin/:destination' component={Flights} />
-            
+            <Route exact path='/flight/:id' component={FlightInfo} />
 
 
         </Router>
